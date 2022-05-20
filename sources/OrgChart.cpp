@@ -149,6 +149,7 @@ namespace ariel{
                 temp.insert(temp.begin(),curr);
                 for(int i=0;i<curr->childern.size();i++)
                     main_queue.push(curr->childern.at((unsigned int)i));
+                    delete curr;
             }
             for(Node* n: temp){
                 this->runrev.insert(this->runrev.begin(),n);
