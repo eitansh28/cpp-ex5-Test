@@ -16,12 +16,12 @@ using namespace ariel;
 
 int main() {
   OrgChart organization;
-  organization.add_root("CEO")
+  organization.add_root("CEO");
       .add_sub("CEO", "CTO")         // Now the CTO is subordinate to the CEO
       .add_sub("CEO", "CFO")         // Now the CFO is subordinate to the CEO
       .add_sub("CEO", "COO")         // Now the COO is subordinate to the CEO
       .add_sub("CTO", "VP_SW") // Now the VP Software is subordinate to the CTO
-      .add_sub("COO", "VP_BI").add_sub("CFO", "RRR").add_sub("RRR", "XXX").add_sub("RRR","SSS");      // Now the VP_BI is subordinate to the COO
+      .add_sub("COO", "VP_BI").add_sub("CFO", "RRR").add_sub("RRR", "XXX").add_sub("RRR","SSS");//.add_sub("SSS","QQ");      // Now the VP_BI is subordinate to the COO
 
   cout << organization << endl; /* Prints the org chart in a reasonable format. For example:
       //  CEO
